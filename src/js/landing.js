@@ -4,14 +4,19 @@ $(document).ready(() => {
         $(".description").slideDown(1000)
     }, 3500)
     setTimeout(() => {
-        $(".description").text("A project by Steven.")
-    }, 4750)
-    setTimeout(() => {
-        $(".description").text("A project by Steven..")
-    }, 5000)
-    setTimeout(() => {
-        $(".description").text("A project by Steven...")
-    }, 5250)
+        setInterval(() => {
+            $(".description").text("A project by Steven")
+            setTimeout(() => {
+                $(".description").text("A project by Steven.")
+            }, 250)
+            setTimeout(() => {
+                $(".description").text("A project by Steven..")
+            }, 500)
+            setTimeout(() => {
+                $(".description").text("A project by Steven...")
+            }, 750)
+        }, 1000)
+    }, 3500)
     const characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     l = e = x = i = c = a = 0;
     setTimeout(() => {
@@ -87,3 +92,5 @@ $(document).ready(() => {
         }, 25)
     }, 500)
 })
+
+const socket = io();

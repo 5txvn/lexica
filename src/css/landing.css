@@ -1,0 +1,76 @@
+body {
+    font-family: Poppins;
+    background: url("../assets/landing-background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(white, #f2f2f2);
+}
+
+.title {
+    color: red;
+    font-size: 15vw;
+    margin: 0;
+}
+
+.description {
+    font-size: 5vw;
+    margin: 0;
+}
+
+.title-div {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 20px 10px rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+.enter {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .enter:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .enter:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .enter {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  }
+
