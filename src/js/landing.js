@@ -92,5 +92,4 @@ $(document).ready(() => {
         }, 25)
     }, 500)
 })
-
-const socket = io();
+//const socket = io();
