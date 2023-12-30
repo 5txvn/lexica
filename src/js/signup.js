@@ -1,10 +1,14 @@
 toastr.options.showMethod = 'slideDown';
 $(function() {
-    //socketio stuff
-    const socket = io();
-    socket.on("username_fail", () => {
-        toastr.error('Username already in user, please choose a different username!', "Uername Error");
-    })
+    if (window.location.search == "?1") {
+        toastr.warning("Password needs to be 8 characters or longer, please re-enter", "Password Error")
+    } else if (window.location.search == "?2") {
+        toastr.warning("Password needs to include a number, please re-enter", "Password Error")
+    } else if (window.location.search == "?3") {
+        toastr.warning("Password needs to include a capital letter, please re-enter", "Password Error")
+    } else if (window.location.search == "?4") {
+        toastr.warning("Username already in use, please use a different username", "Username Error")
+    }
     //loading in animations
     $(".title").hide();
     $(".username").hide();
