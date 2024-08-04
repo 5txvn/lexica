@@ -2,16 +2,11 @@
 //test
 const express = require('express');
 const app = express();
+const PORT = 3000;
 app.use(express.urlencoded({extended: true}))
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/src"))
 app.use(express.static(__dirname + "/assets"))
-
-//socket.io setup
-const http = require('http');
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
 
 //connect to socket.io
 io.on("connection", (socket) => {
@@ -87,7 +82,7 @@ app.post('/sign-up', (req, res) => {
           name: req.body.name,
           email: req.body.email,
           classes: [],
-          admin: false
+          admin: false   
         });
         //create the user in the database
         async function createUser() {
@@ -147,4 +142,6 @@ app.post("/create-classroom", (req, res) => {
 })
 
 
-server.listen(3000)
+app.listen(PORT, () => {
+  console.log(`App is now hosted on port ${PORT}`)
+})
